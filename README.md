@@ -25,7 +25,7 @@ O projeto foi construído como uma página estática de alta conversão, com ide
 ## Deploy
 
 O projeto está preparado para publicação estática em plataformas como Netlify.
-O repositório inclui um workflow de deploy contínuo via GitHub Actions que dispara uma nova build no Netlify a cada push na branch `main`.
+O repositório público está com GitHub Pages habilitado a partir da branch `main`, permitindo deploy automático a cada novo push.
 
 ## Marca
 
@@ -36,4 +36,4 @@ Slogan: `Conectando você ao melhor de Alagoas.`
 - Substituir contatos e links de redes pelos dados oficiais.
 - Trocar imagens genéricas por fotos próprias dos empreendimentos e imóveis.
 - Integrar analytics, pixels e UTMs de campanha.
-- Refinar o fluxo de deploy com secrets privados e validações adicionais, se necessário.
+- Se desejar manter o deploy principal no Netlify, conectar futuramente a integração nativa do repositório ou um workflow dedicado com secrets.
