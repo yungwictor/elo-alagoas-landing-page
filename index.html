@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elo Alagoas | Intermediação Imobiliária e Turística</title>
+  <meta
+    name="description"
+    content="Elo Alagoas conecta investidores e viajantes ao melhor do litoral alagoano com loteamentos exclusivos e casas de temporada premium."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            sand: "#FDFBF7",
+            sea: {
+              50: "#ecfeff",
+              100: "#cffafe",
+              400: "#22d3ee",
+              500: "#0EA5E9",
+              700: "#0D9488",
+              900: "#0F3D44"
+            },
+            grove: {
+              100: "#DCFCE7",
+              500: "#166534",
+              700: "#365314",
+              900: "#1F2D16"
+            },
+            sun: {
+              300: "#FCD34D",
+              500: "#D97706",
+              600: "#B45309"
+            },
+            ink: "#172026"
+          },
+          fontFamily: {
+            sans: ["Manrope", "sans-serif"],
+            display: ["Fraunces", "serif"]
+          },
+          boxShadow: {
+            soft: "0 24px 80px rgba(23, 32, 38, 0.08)",
+            float: "0 18px 40px rgba(13, 148, 136, 0.14)",
+            warm: "0 18px 40px rgba(217, 119, 6, 0.18)"
+          },
+          backgroundImage: {
+            "hero-glow":
+              "radial-gradient(circle at top left, rgba(14,165,233,0.22), transparent 34%), radial-gradient(circle at bottom right, rgba(217,119,6,0.12), transparent 28%), radial-gradient(circle at 80% 20%, rgba(54,83,20,0.12), transparent 22%)"
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    :root {
+      color-scheme: light;
+    }
+
+    body {
+      background:
+        radial-gradient(circle at top left, rgba(14, 165, 233, 0.08), transparent 25%),
+        radial-gradient(circle at right 10%, rgba(217, 119, 6, 0.08), transparent 24%),
+        radial-gradient(circle at bottom left, rgba(54, 83, 20, 0.08), transparent 26%),
+        #fdfbf7;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px) scale(0.985);
+      transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+
+    .glass-panel {
+      background: rgba(253, 251, 247, 0.58);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+    }
+
+    .soft-grid {
+      background-image:
+        linear-gradient(rgba(23, 32, 38, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(23, 32, 38, 0.05) 1px, transparent 1px);
+      background-size: 30px 30px;
+      mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), transparent);
+    }
+
+    .hero-mosaic img {
+      transform: scale(1.01);
+      transition:
+        transform 0.8s ease,
+        filter 0.8s ease;
+    }
+
+    .hero-mosaic > div:hover img {
+      transform: scale(1.08);
+      filter: saturate(1.08);
+    }
+
+    .floating-ring {
+      animation: drift 9s ease-in-out infinite;
+    }
+
+    .floating-ring.delay {
+      animation-delay: -3s;
+    }
+
+    .brand-logo {
+      filter: saturate(1.04) contrast(1.02);
+    }
+
+    @keyframes drift {
+      0%, 100% {
+        transform: translate3d(0, 0, 0);
+      }
+      50% {
+        transform: translate3d(0, -12px, 0);
+      }
+    }
+  </style>
+</head>
+<body class="font-sans text-ink antialiased selection:bg-sea-100 selection:text-sea-900">
+  <div class="fixed inset-x-0 top-0 z-50">
+    <header class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+      <a href="#inicio" class="group inline-flex items-center" aria-label="Elo Alagoas">
+        <div class="rounded-[1.5rem] border border-white/70 bg-white/82 px-3 py-2 shadow-soft backdrop-blur">
+          <img
+            src="./logo-elo-alagoas.png"
+            alt="Logo Elo Alagoas"
+            class="brand-logo h-auto w-[172px] sm:w-[220px] lg:w-[250px]"
+          />
+        </div>
+      </a>
+
+      <nav class="glass-panel absolute left-1/2 hidden -translate-x-1/2 rounded-full border border-white/60 px-3 py-2 shadow-soft lg:flex">
+        <ul class="flex items-center gap-1 text-sm font-semibold text-ink/70">
+          <li><a class="rounded-full px-4 py-2 transition hover:bg-white/80 hover:text-ink" href="#inicio">Início</a></li>
+          <li><a class="rounded-full px-4 py-2 transition hover:bg-white/80 hover:text-ink" href="#loteamentos">Loteamentos</a></li>
+          <li><a class="rounded-full px-4 py-2 transition hover:bg-white/80 hover:text-ink" href="#temporada">Temporada</a></li>
+          <li><a class="rounded-full px-4 py-2 transition hover:bg-white/80 hover:text-ink" href="#sobre">Sobre Nós</a></li>
+          <li><a class="rounded-full px-4 py-2 transition hover:bg-white/80 hover:text-ink" href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+
+      <div class="hidden items-center gap-3 lg:flex">
+        <a
+          href="https://wa.me/5582999999999?text=Ol%C3%A1%2C%20quero%20falar%20com%20um%20consultor%20da%20Elo%20Alagoas."
+          target="_blank"
+          rel="noreferrer"
+          class="inline-flex items-center gap-2 rounded-full bg-ink px-5 py-3 text-sm font-semibold text-white shadow-soft transition duration-300 hover:-translate-y-0.5 hover:bg-sea-900"
+        >
+          <span class="h-5 w-5 rounded-full bg-emerald-500/15 p-1 text-emerald-600">
+            <svg viewBox="0 0 24 24" fill="currentColor" class="h-full w-full" aria-hidden="true">
+              <path d="M16.75 13.96c.25.13 1.47.72 1.7.8.23.08.39.13.44.2.05.08.05.45-.1.88-.15.42-.86.82-1.17.87-.3.05-.68.07-1.1-.06-.25-.08-.57-.19-.98-.37-1.72-.74-2.85-2.47-2.94-2.58-.08-.12-.7-.93-.7-1.77 0-.84.44-1.25.59-1.42.15-.17.33-.21.44-.21h.32c.1 0 .25-.04.39.29.14.33.46 1.13.5 1.22.04.08.06.18.01.3-.05.13-.08.21-.16.32-.08.09-.16.2-.23.28-.08.08-.16.17-.07.33.09.17.39.64.84 1.04.57.5 1.05.66 1.2.74.15.08.24.07.33-.04.08-.1.37-.43.47-.58.1-.14.2-.12.34-.07Z" />
+              <path d="M20.52 3.48A11.85 11.85 0 0 0 12.07 0C5.5 0 .15 5.35.15 11.92c0 2.1.55 4.15 1.59 5.96L0 24l6.29-1.65a11.88 11.88 0 0 0 5.78 1.47h.01c6.57 0 11.92-5.35 11.92-11.92 0-3.18-1.24-6.17-3.48-8.42Zm-8.45 18.33h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.73.98.99-3.63-.23-.37a9.92 9.92 0 1 1 8.38 4.61Z" />
+            </svg>
+          </span>
+          Fale com um Consultor
+        </a>
+      </div>
+
+      <button
+        id="mobile-menu-button"
+        class="glass-panel inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/60 text-ink shadow-soft lg:hidden"
+        aria-label="Abrir menu"
+      >
+        <i data-lucide="menu" class="h-5 w-5"></i>
+      </button>
+    </header>
+
+    <div
+      id="mobile-menu"
+      class="mx-4 hidden rounded-3xl border border-white/60 bg-sand/95 p-4 shadow-soft backdrop-blur xl:hidden"
+    >
+      <div class="flex flex-col gap-2 text-sm font-semibold text-ink/75">
+        <a class="rounded-2xl px-4 py-3 transition hover:bg-white" href="#inicio">Início</a>
+        <a class="rounded-2xl px-4 py-3 transition hover:bg-white" href="#loteamentos">Loteamentos</a>
+        <a class="rounded-2xl px-4 py-3 transition hover:bg-white" href="#temporada">Temporada</a>
+        <a class="rounded-2xl px-4 py-3 transition hover:bg-white" href="#sobre">Sobre Nós</a>
+        <a class="rounded-2xl px-4 py-3 transition hover:bg-white" href="#contato">Contato</a>
+        <a
+          href="https://wa.me/5582999999999?text=Ol%C3%A1%2C%20quero%20falar%20com%20um%20consultor%20da%20Elo%20Alagoas."
+          target="_blank"
+          rel="noreferrer"
+          class="mt-2 inline-flex items-center justify-center gap-2 rounded-2xl bg-ink px-4 py-3 text-white"
+        >
+          <i data-lucide="message-circle" class="h-4 w-4"></i>
+          Fale com um Consultor
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <main id="inicio" class="relative overflow-hidden">
+    <section class="relative isolate pt-28 sm:pt-32">
+      <div class="soft-grid absolute inset-x-0 top-0 h-64 opacity-40"></div>
+      <div class="floating-ring absolute left-6 top-28 h-32 w-32 rounded-full border border-sea-400/20 bg-sea-400/10 blur-2xl"></div>
+      <div class="floating-ring delay absolute right-8 top-40 h-40 w-40 rounded-full border border-sun-300/25 bg-sun-300/10 blur-3xl"></div>
+
+      <div class="mx-auto grid max-w-7xl gap-12 px-4 pb-24 sm:px-6 lg:grid-cols-[1.08fr_0.92fr] lg:items-center lg:px-8 lg:pb-28">
+        <div class="reveal">
+          <span class="inline-flex items-center gap-2 rounded-full border border-sea-500/15 bg-white/80 px-4 py-2 text-xs font-bold uppercase tracking-[0.24em] text-sea-700 shadow-soft">
+            <i data-lucide="trees" class="h-4 w-4"></i>
+            Intermediação Imobiliária e Turística no Litoral de Alagoas
+          </span>
+
+          <h1 class="mt-6 max-w-3xl font-display text-5xl font-bold leading-[0.94] tracking-tight text-ink sm:text-6xl lg:text-7xl">
+            Seu lugar no paraíso
+            <span class="text-sea-700">alagoano</span>
+            está aqui.
+          </h1>
+
+          <p class="mt-6 max-w-2xl text-lg leading-8 text-ink/72 sm:text-xl">
+            A ponte perfeita entre o investimento seguro em lotes e as férias inesquecíveis à beira-mar. Curadoria refinada, suporte próximo e oportunidades selecionadas em pontos estratégicos do litoral.
+          </p>
+
+          <div class="mt-10 flex flex-col gap-4 sm:flex-row">
+            <a
+              href="#loteamentos"
+              class="group inline-flex items-center justify-center gap-3 rounded-full bg-grove-700 px-7 py-4 text-sm font-bold text-white shadow-soft transition duration-300 hover:-translate-y-1 hover:bg-grove-900"
+            >
+              <i data-lucide="landmark" class="h-5 w-5 transition group-hover:rotate-6"></i>
+              Quero Investir em Lotes
+            </a>
+            <a
+              href="#temporada"
+              class="group inline-flex items-center justify-center gap-3 rounded-full bg-sea-700 px-7 py-4 text-sm font-bold text-white shadow-float transition duration-300 hover:-translate-y-1 hover:bg-sea-900"
+            >
+              <i data-lucide="waves" class="h-5 w-5 transition group-hover:translate-x-1"></i>
+              Quero Alugar por Temporada
+            </a>
+          </div>
+
+          <div class="mt-10 grid gap-4 sm:grid-cols-3">
+            <div class="glass-panel rounded-3xl border border-white/70 p-5 shadow-soft">
+              <p class="text-3xl font-extrabold text-ink">+120</p>
+              <p class="mt-2 text-sm leading-6 text-ink/65">negócios assessorados com foco em segurança e experiência premium.</p>
+            </div>
+            <div class="glass-panel rounded-3xl border border-white/70 p-5 shadow-soft">
+              <p class="text-3xl font-extrabold text-ink">9.8/10</p>
+              <p class="mt-2 text-sm leading-6 text-ink/65">média de satisfação entre investidores, famílias e grupos de temporada.</p>
+            </div>
+            <div class="glass-panel rounded-3xl border border-white/70 p-5 shadow-soft">
+              <p class="text-3xl font-extrabold text-ink">100%</p>
+              <p class="mt-2 text-sm leading-6 text-ink/65">acompanhamento consultivo, do primeiro contato à assinatura e estadia.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal relative">
+          <div class="absolute inset-x-10 -top-8 h-24 rounded-full bg-sea-400/15 blur-3xl"></div>
+          <div class="hero-mosaic grid auto-rows-[128px] grid-cols-2 gap-4 sm:auto-rows-[156px]">
+            <div class="group col-span-2 overflow-hidden rounded-[2rem] border border-white/70 shadow-soft">
+              <img
+                src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1400&q=80"
+                alt="Vista aérea do mar turquesa e bancos de areia"
+                class="h-full w-full object-cover"
+              />
+            </div>
+            <div class="overflow-hidden rounded-[2rem] border border-white/70 shadow-soft">
+              <img
+                src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=900&q=80"
+                alt="Casa de temporada de alto padrão com piscina"
+                class="h-full w-full object-cover"
+              />
+            </div>
+            <div class="overflow-hidden rounded-[2rem] border border-white/70 shadow-soft">
+              <img
+                src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80"
+                alt="Projeto imobiliário próximo ao litoral"
+                class="h-full w-full object-cover"
+              />
+            </div>
+            <div class="overflow-hidden rounded-[2rem] border border-white/70 shadow-soft">
+              <img
+                src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=900&q=80"
+                alt="Coqueiral com mar ao fundo"
+                class="h-full w-full object-cover"
+              />
+            </div>
+            <div class="glass-panel relative overflow-hidden rounded-[2rem] border border-white/70 p-6 shadow-soft">
+              <div class="absolute inset-0 bg-hero-glow opacity-80"></div>
+              <div class="relative">
+                <span class="inline-flex items-center gap-2 rounded-full bg-white/80 px-3 py-1 text-xs font-bold uppercase tracking-[0.22em] text-ink/70">
+                  <i data-lucide="sparkles" class="h-4 w-4 text-sun-500"></i>
+                  Destaque da Semana
+                </span>
+                <h2 class="mt-4 font-display text-3xl font-bold text-ink">Rota dos Milagres</h2>
+                <p class="mt-3 text-sm leading-6 text-ink/70">
+                  Casas assinadas e loteamentos selecionados em trechos com alta valorização, mar cristalino e acesso privilegiado.
+                </p>
+                <div class="mt-5 inline-flex items-center gap-2 text-sm font-bold text-sea-700">
+                  Conheça as oportunidades
+                  <i data-lucide="arrow-right" class="h-4 w-4"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="relative z-10 -mt-6 pb-14">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div class="reveal glass-panel rounded-[2rem] border border-white/70 p-4 shadow-soft sm:p-6">
+          <div class="flex flex-col gap-6">
+            <div class="flex flex-wrap items-center justify-between gap-4">
+              <div>
+                <p class="text-sm font-bold uppercase tracking-[0.2em] text-sea-700">Busca Inteligente</p>
+                <h2 class="mt-2 font-display text-3xl font-bold text-ink">Filtre sua próxima decisão em segundos</h2>
+              </div>
+              <div class="rounded-full bg-white/90 p-1 shadow-inner">
+                <button
+                  type="button"
+                  data-tab="lotes"
+                  class="search-tab active-tab rounded-full bg-grove-700 px-4 py-2 text-sm font-bold text-white transition"
+                >
+                  Quero Comprar Lote
+                </button>
+                <button
+                  type="button"
+                  data-tab="temporada"
+                  class="search-tab rounded-full px-4 py-2 text-sm font-bold text-ink/65 transition"
+                >
+                  Quero Alugar
+                </button>
+              </div>
+            </div>
+
+            <form id="quick-search-form" class="grid gap-4 lg:grid-cols-[1.15fr_0.95fr_0.95fr_auto]">
+              <label class="group rounded-[1.5rem] border border-ink/8 bg-white/90 px-5 py-4 transition hover:border-sea-500/35">
+                <span class="text-xs font-bold uppercase tracking-[0.2em] text-ink/45">Localização</span>
+                <div class="mt-3 flex items-center gap-3">
+                  <i data-lucide="map-pinned" class="h-5 w-5 text-sea-700"></i>
+                  <select
+                    id="search-location"
+                    class="w-full bg-transparent text-sm font-semibold text-ink outline-none"
+                  >
+                    <option>Litoral Sul</option>
+                    <option>Rota dos Milagres</option>
+                    <option>Maragogi</option>
+                    <option>Barra de São Miguel</option>
+                    <option>São Miguel dos Milagres</option>
+                  </select>
+                </div>
+              </label>
+
+              <label class="group rounded-[1.5rem] border border-ink/8 bg-white/90 px-5 py-4 transition hover:border-grove-700/35">
+                <span id="budget-label" class="text-xs font-bold uppercase tracking-[0.2em] text-ink/45">Faixa de Investimento</span>
+                <div class="mt-3 flex items-center gap-3">
+                  <i data-lucide="wallet" class="h-5 w-5 text-grove-700"></i>
+                  <select
+                    id="search-budget"
+                    class="w-full bg-transparent text-sm font-semibold text-ink outline-none"
+                  >
+                    <option>Até R$ 150 mil</option>
+                    <option>R$ 150 mil a R$ 300 mil</option>
+                    <option>R$ 300 mil a R$ 600 mil</option>
+                    <option>Acima de R$ 600 mil</option>
+                  </select>
+                </div>
+              </label>
+
+              <label class="group rounded-[1.5rem] border border-ink/8 bg-white/90 px-5 py-4 transition hover:border-sun-500/35">
+                <span id="interest-label" class="text-xs font-bold uppercase tracking-[0.2em] text-ink/45">Perfil Procurado</span>
+                <div class="mt-3 flex items-center gap-3">
+                  <i data-lucide="sliders-horizontal" class="h-5 w-5 text-sun-500"></i>
+                  <select
+                    id="search-interest"
+                    class="w-full bg-transparent text-sm font-semibold text-ink outline-none"
+                  >
+                    <option>Beira-mar ou vista aberta</option>
+                    <option>Condomínio com infraestrutura</option>
+                    <option>Alta liquidez para revenda</option>
+                    <option>Entrada facilitada</option>
+                  </select>
+                </div>
+              </label>
+
+              <button
+                type="submit"
+                class="inline-flex items-center justify-center gap-3 rounded-[1.5rem] bg-sun-500 px-6 py-4 text-sm font-bold text-white shadow-warm transition duration-300 hover:-translate-y-1 hover:bg-sun-600"
+              >
+                <i data-lucide="message-circle" class="h-5 w-5"></i>
+                Buscar no WhatsApp
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="loteamentos" class="py-16 sm:py-20">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="reveal flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+          <div class="max-w-2xl">
+            <span class="inline-flex items-center gap-2 rounded-full bg-grove-100 px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-grove-700">
+              <i data-lucide="trees" class="h-4 w-4"></i>
+              Vertente 1 • Loteamentos Exclusivos
+            </span>
+            <h2 class="mt-4 font-display text-4xl font-bold text-ink sm:text-5xl">A Solidez do seu Investimento no Litoral</h2>
+            <p class="mt-5 text-lg leading-8 text-ink/70">
+              Selecionamos loteamentos com localização estratégica, infraestrutura consolidada e potencial real de valorização em regiões que estão no radar de quem pensa longo prazo.
+            </p>
+          </div>
+          <a
+            href="https://wa.me/5582999999999?text=Ol%C3%A1%2C%20quero%20receber%20mais%20op%C3%A7%C3%B5es%20de%20loteamentos%20no%20litoral%20de%20Alagoas."
+            target="_blank"
+            rel="noreferrer"
+            class="inline-flex items-center gap-2 self-start rounded-full border border-ink/10 bg-white/90 px-5 py-3 text-sm font-bold text-ink shadow-soft transition hover:-translate-y-0.5 hover:border-grove-700/30 hover:text-grove-700"
+          >
+            Ver portfólio completo
+            <i data-lucide="arrow-up-right" class="h-4 w-4"></i>
+          </a>
+        </div>
+
+        <div class="mt-10 grid gap-6 lg:grid-cols-3">
+          <article class="reveal group overflow-hidden rounded-[2rem] border border-white/70 bg-white/90 shadow-soft">
+            <div class="relative h-72 overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80"
+                alt="Loteamento com acesso a praia e vegetação"
+                class="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+              />
+              <span class="absolute left-5 top-5 rounded-full bg-white/90 px-3 py-2 text-xs font-bold uppercase tracking-[0.18em] text-grove-700 shadow-soft">
+                Praia do Peba
+              </span>
+            </div>
+            <div class="p-6">
+              <div class="flex items-start justify-between gap-4">
+                <div>
+                  <h3 class="font-display text-3xl font-bold text-ink">Reserva dos Coqueiros</h3>
+                  <p class="mt-2 text-sm leading-6 text-ink/65">Lotes amplos com vocação para segunda residência e excelente perspectiva de valorização.</p>
+                </div>
+                <span class="rounded-full bg-grove-100 px-3 py-2 text-xs font-bold text-grove-700">Pré-lançamento</span>
+              </div>
+              <div class="mt-6 grid grid-cols-3 gap-3 text-sm text-ink/70">
+                <div class="rounded-2xl bg-sand px-3 py-3 text-center">
+                  <i data-lucide="zap" class="mx-auto h-4 w-4 text-grove-700"></i>
+                  <p class="mt-2 font-semibold">Energia</p>
+                </div>
+                <div class="rounded-2xl bg-sand px-3 py-3 text-center">
+                  <i data-lucide="droplets" class="mx-auto h-4 w-4 text-sea-700"></i>
+                  <p class="mt-2 font-semibold">Água</p>
+                </div>
+                <div class="rounded-2xl bg-sand px-3 py-3 text-center">
+                  <i data-lucide="shield-check" class="mx-auto h-4 w-4 text-sun-500"></i>
+                  <p class="mt-2 font-semibold">Segurança</p>
+                </div>
+              </div>
+              <div class="mt-6 flex items-center justify-between gap-4">
+                <p class="text-sm font-semibold text-ink/60">A partir de <span class="text-xl font-extrabold text-ink">R$ 129 mil</span></p>
+                <a
+                  href="https://wa.me/5582999999999?text=Quero%20a%20tabela%20e%20o%20book%20do%20Reserva%20dos%20Coqueiros."
+                  target="_blank"
+                  rel="noreferrer"
+                  class="inline-flex items-center gap-2 rounded-full bg-grove-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-grove-900"
+                >
+                  Solicitar Tabela e Book
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="reveal group overflow-hidden rounded-[2rem] border border-white/70 bg-white/90 shadow-soft">
+            <div class="relative h-72 overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1468413253725-0d5181091126?auto=format&fit=crop&w=1200&q=80"
+                alt="Loteamento verde próximo ao litoral"
+                class="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+              />
+              <span class="absolute left-5 top-5 rounded-full bg-white/90 px-3 py-2 text-xs font-bold uppercase tracking-[0.18em] text-grove-700 shadow-soft">
+                Barra de São Miguel
+              </span>
+            </div>
+            <div class="p-6">
+              <div class="flex items-start justify-between gap-4">
+                <div>
+                  <h3 class="font-display text-3xl font-bold text-ink">Jardins da Falésia</h3>
+                  <p class="mt-2 text-sm leading-6 text-ink/65">Infraestrutura planejada, paisagismo elegante e acesso facilitado às principais rotas turísticas.</p>
+                </div>
+                <span class="rounded-full bg-white px-3 py-2 text-xs font-bold text-sea-700 shadow-soft">Alta liquidez</span>
+              </div>
+              <div class="mt-6 grid grid-cols-3 gap-3 text-sm text-ink/70">
+                <div class="rounded-2xl bg-sand px-3 py-3 text-center">
+                  <i data-lucide="car-front" class="mx-auto h-4 w-4 text-grove-700"></i>
+                  <p class="mt-2 font-semibold">Acesso</p>
+                </div>
+                <div class="rounded-2xl bg-sand px-3 py-3 text-center">
+                  <i data-lucide="trees" class="mx-auto h-4 w-4 text-grove-700"></i>
+                  <p class="mt-2 font-semibold">Paisagismo</p>
+                </div>
+                <div class="rounded-2xl bg-sand px-3 py-3 text-center">
+                  <i data-lucide="badge-check" class="mx-auto h-4 w-4 text-sun-500"></i>
+                  <p class="mt-2 font-semibold">Regularizado</p>
+                </div>
+              </div>
+              <div class="mt-6 flex items-center justify-between gap-4">
+                <p class="text-sm font-semibold text-ink/60">A partir de <span class="text-xl font-extrabold text-ink">R$ 198 mil</span></p>
+                <a
+                  href="https://wa.me/5582999999999?text=Quero%20a%20tabela%20e%20o%20book%20do%20Jardins%20da%20Fal%C3%A9sia."
+                  target="_blank"
+                  rel="noreferrer"
+                  class="inline-flex items-center gap-2 rounded-full bg-grove-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-grove-900"
+                >
+                  Solicitar Tabela e Book
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="reveal group overflow-hidden rounded-[2rem] border border-white/70 bg-white/90 shadow-soft">
+            <div class="relative h-72 overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?auto=format&fit=crop&w=1200&q=80"
+                alt="Área com coqueiros e faixa de areia"
+                class="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+              />
+              <span class="absolute left-5 top-5 rounded-full bg-white/90 px-3 py-2 text-xs font-bold uppercase tracking-[0.18em] text-grove-700 shadow-soft">
+                São Miguel dos Milagres
+              </span>
+            </div>
+            <div class="p-6">
+              <div class="flex items-start justify-between gap-4">
+                <div>
+                  <h3 class="font-display text-3xl font-bold text-ink">Costa Serena Milagres</h3>
+                  <p class="mt-2 text-sm leading-6 text-ink/65">Projeto boutique para quem busca patrimônio em uma das regiões mais desejadas do Nordeste.</p>
+                </div>
+                <span class="rounded-full bg-sun-300/25 px-3 py-2 text-xs font-bold text-sun-600">Boutique</span>
+              </div>
+              <div class="mt-6 grid grid-cols-3 gap-3 text-sm text-ink/70">
+                <div class="rounded-2xl bg-sand px-3 py-3 text-center">
+                  <i data-lucide="waves" class="mx-auto h-4 w-4 text-sea-700"></i>
+                  <p class="mt-2 font-semibold">Beach Club</p>
+                </div>
+                <div class="rounded-2xl bg-sand px-3 py-3 text-center">
+                  <i data-lucide="shield" class="mx-auto h-4 w-4 text-grove-700"></i>
+                  <p class="mt-2 font-semibold">Portaria</p>
+                </div>
+                <div class="rounded-2xl bg-sand px-3 py-3 text-center">
+                  <i data-lucide="rocket" class="mx-auto h-4 w-4 text-sun-500"></i>
+                  <p class="mt-2 font-semibold">Valorização</p>
+                </div>
+              </div>
+              <div class="mt-6 flex items-center justify-between gap-4">
+                <p class="text-sm font-semibold text-ink/60">A partir de <span class="text-xl font-extrabold text-ink">R$ 245 mil</span></p>
+                <a
+                  href="https://wa.me/5582999999999?text=Quero%20a%20tabela%20e%20o%20book%20do%20Costa%20Serena%20Milagres."
+                  target="_blank"
+                  rel="noreferrer"
+                  class="inline-flex items-center gap-2 rounded-full bg-grove-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-grove-900"
+                >
+                  Solicitar Tabela e Book
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="temporada" class="py-16 sm:py-20">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="reveal flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+          <div class="max-w-2xl">
+            <span class="inline-flex items-center gap-2 rounded-full bg-sea-50 px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-sea-700">
+              <i data-lucide="sunset" class="h-4 w-4"></i>
+              Vertente 2 • Casas de Temporada
+            </span>
+            <h2 class="mt-4 font-display text-4xl font-bold text-ink sm:text-5xl">Vem Veranear em Alagoas</h2>
+            <p class="mt-5 text-lg leading-8 text-ink/70">
+              Casas com estética impecável, localização desejada e estrutura pensada para relaxar com conforto. Estadias que começam no desejo e terminam na vontade de voltar.
+            </p>
+          </div>
+          <a
+            href="https://wa.me/5582999999999?text=Ol%C3%A1%2C%20quero%20ver%20mais%20casas%20de%20temporada%20em%20Alagoas."
+            target="_blank"
+            rel="noreferrer"
+            class="inline-flex items-center gap-2 self-start rounded-full border border-ink/10 bg-white/90 px-5 py-3 text-sm font-bold text-ink shadow-soft transition hover:-translate-y-0.5 hover:border-sea-700/30 hover:text-sea-700"
+          >
+            Receber seleção personalizada
+            <i data-lucide="arrow-up-right" class="h-4 w-4"></i>
+          </a>
+        </div>
+
+        <div class="mt-10 grid gap-6 lg:grid-cols-3">
+          <article class="reveal group overflow-hidden rounded-[2rem] border border-white/70 bg-white/90 shadow-soft">
+            <div class="relative h-80 overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?auto=format&fit=crop&w=1400&q=80"
+                alt="Casa de temporada com coqueiros e acesso à praia"
+                class="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+              />
+              <div class="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black/55 to-transparent"></div>
+              <div class="absolute bottom-5 left-5 flex items-center gap-2 rounded-full bg-white/90 px-3 py-2 text-xs font-bold text-sea-700 shadow-soft">
+                <i data-lucide="map-pin" class="h-4 w-4"></i>
+                São Miguel dos Milagres
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-start justify-between gap-4">
+                <div>
+                  <h3 class="font-display text-3xl font-bold text-ink">Villa dos Coqueiros</h3>
+                  <p class="mt-2 text-sm text-ink/65">Design tropical sofisticado, piscina privativa e living integrado para grupos e famílias.</p>
+                </div>
+                <div class="rounded-2xl bg-sun-300/20 px-3 py-2 text-right text-xs font-bold text-sun-600">
+                  4.9
+                  <div class="mt-1 flex gap-1 text-sun-500">
+                    <i data-lucide="star" class="h-3.5 w-3.5 fill-current"></i>
+                    <i data-lucide="star" class="h-3.5 w-3.5 fill-current"></i>
+                    <i data-lucide="star" class="h-3.5 w-3.5 fill-current"></i>
+                    <i data-lucide="star" class="h-3.5 w-3.5 fill-current"></i>
+                    <i data-lucide="star" class="h-3.5 w-3.5 fill-current"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-6 flex flex-wrap gap-3 text-sm font-semibold text-ink/70">
+                <span class="inline-flex items-center gap-2 rounded-full bg-sand px-4 py-2"><i data-lucide="bed-double" class="h-4 w-4 text-sea-700"></i> 5 quartos</span>
+                <span class="inline-flex items-center gap-2 rounded-full bg-sand px-4 py-2"><i data-lucide="users" class="h-4 w-4 text-sea-700"></i> 12 hóspedes</span>
+                <span class="inline-flex items-center gap-2 rounded-full bg-sand px-4 py-2"><i data-lucide="waves" class="h-4 w-4 text-sea-700"></i> frente mar</span>
+              </div>
+              <div class="mt-6 flex items-center justify-between gap-4">
+                <p class="text-sm font-semibold text-ink/60">A partir de <span class="text-xl font-extrabold text-ink">R$ 2.400/diária</span></p>
+                <a
+                  href="https://wa.me/5582999999999?text=Quero%20ver%20a%20disponibilidade%20da%20Villa%20dos%20Coqueiros."
+                  target="_blank"
+                  rel="noreferrer"
+                  class="inline-flex items-center gap-2 rounded-full bg-sea-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-sea-900"
+                >
+                  Ver Disponibilidade
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="reveal group overflow-hidden rounded-[2rem] border border-white/70 bg-white/90 shadow-soft">
+            <div class="relative h-80 overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1400&q=80"
+                alt="Casa elegante com piscina e área externa"
+                class="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+              />
+              <div class="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black/55 to-transparent"></div>
+              <div class="absolute bottom-5 left-5 flex items-center gap-2 rounded-full bg-white/90 px-3 py-2 text-xs font-bold text-sea-700 shadow-soft">
+                <i data-lucide="map-pin" class="h-4 w-4"></i>
+                Barra de São Miguel
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-start justify-between gap-4">
+                <div>
+                  <h3 class="font-display text-3xl font-bold text-ink">Casa Maré Alta</h3>
+                  <p class="mt-2 text-sm text-ink/65">Arquitetura leve, varanda ventilada e atmosfera de resort particular a poucos passos do mar.</p>
+                </div>
+                <div class="rounded-2xl bg-sun-300/20 px-3 py-2 text-right text-xs font-bold text-sun-600">
+                  4.8
+                  <div class="mt-1 flex gap-1 text-sun-500">
+                    <i data-lucide="star" class="h-3.5 w-3.5 fill-current"></i>
+                    <i data-lucide="star" class="h-3.5 w-3.5 fill-current"></i>
+                    <i data-lucide="star" class="h-3.5 w-3.5 fill-current"></i>
+                    <i data-lucide="star" class="h-3.5 w-3.5 fill-current"></i>
+                    <i data-lucide="star" class="h-3.5 w-3.5 fill-current"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-6 flex flex-wrap gap-3 text-sm font-semibold text-ink/70">
+                <span class="inline-flex items-center gap-2 rounded-full bg-sand px-4 py-2"><i data-lucide="bed-double" class="h-4 w-4 text-sea-700"></i> 4 suítes</span>
+                <span class="inline-flex items-center gap-2 rounded-full bg-sand px-4 py-2"><i data-lucide="users" class="h-4 w-4 text-sea-700"></i> 10 hóspedes</span>
+                <span class="inline-flex items-center gap-2 rounded-full bg-sand px-4 py-2"><i data-lucide="chef-hat" class="h-4 w-4 text-sea-700"></i> chef opcional</span>
+              </div>
+              <div class="mt-6 flex items-center justify-between gap-4">
+                <p class="text-sm font-semibold text-ink/60">A partir de <span class="text-xl font-extrabold text-ink">R$ 1.950/diária</span></p>
+                <a
+                  href="https://wa.me/5582999999999?text=Quero%20ver%20a%20disponibilidade%20da%20Casa%20Mar%C3%A9%20Alta."
+                  target="_blank"
+                  rel="noreferrer"
+                  class="inline-flex items-center gap-2 rounded-full bg-sea-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-sea-900"
+                >
+                  Ver Disponibilidade
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="reveal group overflow-hidden rounded-[2rem] border border-white/70 bg-white/90 shadow-soft">
+            <div class="relative h-80 overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1400&q=80"
+                alt="Villa contemporânea com piscina e vista tropical"
+                class="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+              />
+              <div class="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black/55 to-transparent"></div>
+              <div class="absolute bottom-5 left-5 flex items-center gap-2 rounded-full bg-white/90 px-3 py-2 text-xs font-bold text-sea-700 shadow-soft">
+                <i data-lucide="map-pin" class="h-4 w-4"></i>
+                Rota dos Milagres
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-start justify-between gap-4">
+                <div>
+                  <h3 class="font-display text-3xl font-bold text-ink">Refúgio da Falésia</h3>
+                  <p class="mt-2 text-sm text-ink/65">Experiência intimista, mobiliário curado e clima de exclusividade para dias de descanso absoluto.</p>
+                </div>
+                <div class="rounded-2xl bg-sun-300/20 px-3 py-2 text-right text-xs font-bold text-sun-600">
+                  5.0
+                  <div class="mt-1 flex gap-1 text-sun-500">
+                    <i data-lucide="star" class="h-3.5 w-3.5 fill-current"></i>
+                    <i data-lucide="star" class="h-3.5 w-3.5 fill-current"></i>
+                    <i data-lucide="star" class="h-3.5 w-3.5 fill-current"></i>
+                    <i data-lucide="star" class="h-3.5 w-3.5 fill-current"></i>
+                    <i data-lucide="star" class="h-3.5 w-3.5 fill-current"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-6 flex flex-wrap gap-3 text-sm font-semibold text-ink/70">
+                <span class="inline-flex items-center gap-2 rounded-full bg-sand px-4 py-2"><i data-lucide="bed-double" class="h-4 w-4 text-sea-700"></i> 3 suítes</span>
+                <span class="inline-flex items-center gap-2 rounded-full bg-sand px-4 py-2"><i data-lucide="users" class="h-4 w-4 text-sea-700"></i> 8 hóspedes</span>
+                <span class="inline-flex items-center gap-2 rounded-full bg-sand px-4 py-2"><i data-lucide="bell" class="h-4 w-4 text-sea-700"></i> concierge</span>
+              </div>
+              <div class="mt-6 flex items-center justify-between gap-4">
+                <p class="text-sm font-semibold text-ink/60">A partir de <span class="text-xl font-extrabold text-ink">R$ 1.680/diária</span></p>
+                <a
+                  href="https://wa.me/5582999999999?text=Quero%20ver%20a%20disponibilidade%20do%20Ref%C3%BAgio%20da%20Fal%C3%A9sia."
+                  target="_blank"
+                  rel="noreferrer"
+                  class="inline-flex items-center gap-2 rounded-full bg-sea-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-sea-900"
+                >
+                  Ver Disponibilidade
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre" class="py-16 sm:py-20">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="reveal overflow-hidden rounded-[2.5rem] border border-white/70 bg-white/85 shadow-soft">
+          <div class="grid gap-10 lg:grid-cols-[0.92fr_1.08fr]">
+            <div class="relative min-h-[320px] overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1468413253725-0d5181091126?auto=format&fit=crop&w=1200&q=80"
+                alt="Paisagem do litoral de Alagoas com mar e vegetação"
+                class="h-full w-full object-cover"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-ink/50 via-transparent to-transparent"></div>
+              <div class="absolute bottom-6 left-6 right-6 rounded-[1.5rem] bg-white/85 p-4 shadow-soft backdrop-blur">
+                <p class="text-xs font-bold uppercase tracking-[0.2em] text-sea-700">Elo Alagoas</p>
+                <p class="mt-2 text-sm leading-6 text-ink/70">Conectando pessoas, capital e experiências aos melhores cenários do litoral alagoano.</p>
+              </div>
+            </div>
+            <div class="p-6 sm:p-10">
+              <span class="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-ink/65 shadow-soft">
+                <i data-lucide="gem" class="h-4 w-4 text-sun-500"></i>
+                Por que a nossa marca?
+              </span>
+              <h2 class="mt-4 font-display text-4xl font-bold text-ink">Curadoria local, rigor jurídico e atendimento que antecipa necessidades.</h2>
+              <p class="mt-5 text-lg leading-8 text-ink/70">
+                Nosso papel não é apenas apresentar opções. É reduzir ruído, elevar confiança e conduzir cada etapa com a sensibilidade de quem vive o território e entende o valor do seu tempo.
+              </p>
+
+              <div class="mt-8 grid gap-4 md:grid-cols-3">
+                <article class="rounded-[1.75rem] bg-sand p-5">
+                  <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-sea-100 text-sea-700">
+                    <i data-lucide="compass" class="h-5 w-5"></i>
+                  </div>
+                  <h3 class="mt-4 text-lg font-extrabold text-ink">Curadoria Local</h3>
+                  <p class="mt-3 text-sm leading-6 text-ink/65">Conhecemos cada palmo do litoral, os acessos, o entorno e o potencial real de cada região.</p>
+                </article>
+                <article class="rounded-[1.75rem] bg-sand p-5">
+                  <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-grove-100 text-grove-700">
+                    <i data-lucide="scale" class="h-5 w-5"></i>
+                  </div>
+                  <h3 class="mt-4 text-lg font-extrabold text-ink">Segurança Jurídica</h3>
+                  <p class="mt-3 text-sm leading-6 text-ink/65">Processos transparentes, documentação revisada e suporte claro para cada decisão de investimento.</p>
+                </article>
+                <article class="rounded-[1.75rem] bg-sand p-5">
+                  <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-sun-300/25 text-sun-600">
+                    <i data-lucide="handshake" class="h-5 w-5"></i>
+                  </div>
+                  <h3 class="mt-4 text-lg font-extrabold text-ink">Atendimento Premium</h3>
+                  <p class="mt-3 text-sm leading-6 text-ink/65">Acompanhamento completo antes, durante e depois da escolha, com comunicação ágil e personalizada.</p>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 sm:py-20">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="reveal flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+          <div class="max-w-2xl">
+            <span class="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-ink/65 shadow-soft">
+              <i data-lucide="quote" class="h-4 w-4 text-sea-700"></i>
+              Prova Social
+            </span>
+            <h2 class="mt-4 font-display text-4xl font-bold text-ink sm:text-5xl">Quem chega por indicação, costuma voltar por confiança.</h2>
+          </div>
+          <p class="max-w-xl text-lg leading-8 text-ink/70">
+            Reunimos experiências de quem investiu com segurança e de quem encontrou em Alagoas uma temporada à altura do que imaginava.
+          </p>
+        </div>
+
+        <div class="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+          <article class="reveal rounded-[2rem] border border-white/70 bg-white/90 p-6 shadow-soft">
+            <div class="flex items-center gap-4">
+              <img
+                src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=240&q=80"
+                alt="Retrato de cliente satisfeito"
+                class="h-16 w-16 rounded-2xl object-cover"
+              />
+              <div>
+                <h3 class="text-lg font-extrabold text-ink">Carlos Mendes</h3>
+                <p class="text-sm font-semibold text-sea-700">Investidor de SP</p>
+              </div>
+            </div>
+            <p class="mt-5 text-sm leading-7 text-ink/68">
+              “Eu queria entrar no litoral alagoano com critério. A equipe filtrou as opções certas, trouxe clareza documental e me apresentou um ativo com ótimo potencial de revenda.”
+            </p>
+          </article>
+
+          <article class="reveal rounded-[2rem] border border-white/70 bg-white/90 p-6 shadow-soft">
+            <div class="flex items-center gap-4">
+              <img
+                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=240&q=80"
+                alt="Retrato de turista satisfeita"
+                class="h-16 w-16 rounded-2xl object-cover"
+              />
+              <div>
+                <h3 class="text-lg font-extrabold text-ink">Fernanda Rocha</h3>
+                <p class="text-sm font-semibold text-grove-700">Turista de Brasília</p>
+              </div>
+            </div>
+            <p class="mt-5 text-sm leading-7 text-ink/68">
+              “A casa era ainda mais bonita do que nas fotos. Tudo fluiu com leveza, desde a indicação do imóvel até o suporte local durante a estadia.”
+            </p>
+          </article>
+
+          <article class="reveal rounded-[2rem] border border-white/70 bg-white/90 p-6 shadow-soft md:col-span-2 xl:col-span-1">
+            <div class="flex items-center gap-4">
+              <img
+                src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=240&q=80"
+                alt="Retrato de casal cliente"
+                class="h-16 w-16 rounded-2xl object-cover"
+              />
+              <div>
+                <h3 class="text-lg font-extrabold text-ink">Ricardo &amp; Joana</h3>
+                <p class="text-sm font-semibold text-sun-600">Família do Recife</p>
+              </div>
+            </div>
+            <p class="mt-5 text-sm leading-7 text-ink/68">
+              “A curadoria fez diferença. Não perdemos tempo com opções genéricas e encontramos uma villa perfeita para reunir a família em Milagres.”
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="pb-16 pt-4 sm:pb-20">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div class="reveal overflow-hidden rounded-[2.5rem] bg-ink px-6 py-10 text-white shadow-soft sm:px-10">
+          <div class="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+            <div>
+              <span class="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-white/80">
+                <i data-lucide="sparkles" class="h-4 w-4 text-sun-300"></i>
+                Atendimento Consultivo
+              </span>
+              <h2 class="mt-5 font-display text-4xl font-bold sm:text-5xl">Pronto para conversar com quem entende o litoral de Alagoas de verdade?</h2>
+              <p class="mt-4 max-w-2xl text-lg leading-8 text-white/72">
+                Seja para investir com segurança ou reservar uma estadia memorável, nosso time monta a rota ideal para o seu perfil.
+              </p>
+            </div>
+            <div class="flex flex-col gap-4 lg:items-end">
+              <a
+                href="https://wa.me/5582999999999?text=Ol%C3%A1%2C%20quero%20ser%20atendido%20pela%20Elo%20Alagoas."
+                target="_blank"
+                rel="noreferrer"
+                class="inline-flex items-center justify-center gap-3 rounded-full bg-sun-500 px-7 py-4 text-sm font-bold text-white shadow-warm transition hover:-translate-y-1 hover:bg-sun-600"
+              >
+                <i data-lucide="message-circle" class="h-5 w-5"></i>
+                Fale com um Consultor
+              </a>
+              <div class="rounded-[1.75rem] border border-white/10 bg-white/5 p-5 text-sm text-white/75">
+                Resposta rápida pelo WhatsApp, com opções alinhadas ao seu orçamento, localização e objetivo.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contato" class="border-t border-ink/8 bg-white/70">
+    <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+      <div class="grid gap-10 lg:grid-cols-[1.1fr_0.6fr_0.6fr_0.7fr]">
+        <div>
+          <div class="inline-flex flex-col gap-4">
+            <div class="inline-flex w-fit rounded-[1.5rem] border border-ink/8 bg-white px-4 py-3 shadow-soft">
+              <img
+                src="./logo-elo-alagoas.png"
+                alt="Logo Elo Alagoas"
+                class="brand-logo h-auto w-[220px] sm:w-[280px]"
+                loading="lazy"
+              />
+            </div>
+            <p class="text-sm text-ink/55">Conectando você ao melhor de Alagoas.</p>
+          </div>
+          <p class="mt-5 max-w-md text-sm leading-7 text-ink/65">
+            Plataforma de intermediação imobiliária e turística com curadoria premium para loteamentos e casas de temporada no litoral alagoano.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="text-sm font-extrabold uppercase tracking-[0.2em] text-ink/55">Navegação</h3>
+          <ul class="mt-5 space-y-3 text-sm font-semibold text-ink/70">
+            <li><a href="#inicio" class="transition hover:text-sea-700">Início</a></li>
+            <li><a href="#loteamentos" class="transition hover:text-sea-700">Loteamentos</a></li>
+            <li><a href="#temporada" class="transition hover:text-sea-700">Temporada</a></li>
+            <li><a href="#sobre" class="transition hover:text-sea-700">Sobre Nós</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-sm font-extrabold uppercase tracking-[0.2em] text-ink/55">Contato</h3>
+          <ul class="mt-5 space-y-3 text-sm font-semibold text-ink/70">
+            <li><a href="tel:+558200000000" class="transition hover:text-sea-700">+55 (82) 0000-0000</a></li>
+            <li><a href="mailto:contato@eloalagoas.com.br" class="transition hover:text-sea-700">contato@eloalagoas.com.br</a></li>
+            <li>Maceió • Rota dos Milagres • Barra de São Miguel</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-sm font-extrabold uppercase tracking-[0.2em] text-ink/55">Redes</h3>
+          <div class="mt-5 flex flex-wrap gap-3">
+            <a href="#" class="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-sand text-ink transition hover:bg-sea-100 hover:text-sea-700">
+              <i data-lucide="instagram" class="h-5 w-5"></i>
+            </a>
+            <a href="#" class="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-sand text-ink transition hover:bg-sea-100 hover:text-sea-700">
+              <i data-lucide="facebook" class="h-5 w-5"></i>
+            </a>
+            <a href="#" class="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-sand text-ink transition hover:bg-sea-100 hover:text-sea-700">
+              <i data-lucide="youtube" class="h-5 w-5"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-10 flex flex-col gap-4 border-t border-ink/8 pt-6 text-sm text-ink/55 sm:flex-row sm:items-center sm:justify-between">
+        <p><span id="current-year"></span> Elo Alagoas. Todos os direitos reservados.</p>
+        <p>“Conectando você ao melhor de Alagoas.”</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    const mobileMenuButton = document.getElementById("mobile-menu-button");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const navLinks = mobileMenu.querySelectorAll("a");
+
+    mobileMenuButton.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+
+    navLinks.forEach((link) => {
+      link.addEventListener("click", () => mobileMenu.classList.add("hidden"));
+    });
+
+    const searchState = {
+      lotes: {
+        budgetLabel: "Faixa de Investimento",
+        interestLabel: "Perfil Procurado",
+        budgetOptions: [
+          "Até R$ 150 mil",
+          "R$ 150 mil a R$ 300 mil",
+          "R$ 300 mil a R$ 600 mil",
+          "Acima de R$ 600 mil"
+        ],
+        interestOptions: [
+          "Beira-mar ou vista aberta",
+          "Condomínio com infraestrutura",
+          "Alta liquidez para revenda",
+          "Entrada facilitada"
+        ],
+        messagePrefix: "Olá, quero comprar lote em"
+      },
+      temporada: {
+        budgetLabel: "Faixa de Diária",
+        interestLabel: "Tipo de Estadia",
+        budgetOptions: [
+          "Até R$ 1.500/diária",
+          "R$ 1.500 a R$ 2.500/diária",
+          "R$ 2.500 a R$ 4.000/diária",
+          "Acima de R$ 4.000/diária"
+        ],
+        interestOptions: [
+          "Casa pé na areia",
+          "Experiência para família",
+          "Grupo de amigos",
+          "Casa com serviço premium"
+        ],
+        messagePrefix: "Olá, quero alugar casa de temporada em"
+      }
+    };
+
+    const searchTabs = document.querySelectorAll(".search-tab");
+    const searchBudget = document.getElementById("search-budget");
+    const searchInterest = document.getElementById("search-interest");
+    const budgetLabel = document.getElementById("budget-label");
+    const interestLabel = document.getElementById("interest-label");
+    const searchLocation = document.getElementById("search-location");
+    const quickSearchForm = document.getElementById("quick-search-form");
+
+    let activeTab = "lotes";
+
+    function renderSelectOptions(element, options) {
+      element.innerHTML = options
+        .map((option) => `<option>${option}</option>`)
+        .join("");
+    }
+
+    function syncSearchTab(tab) {
+      activeTab = tab;
+      const config = searchState[tab];
+      budgetLabel.textContent = config.budgetLabel;
+      interestLabel.textContent = config.interestLabel;
+      renderSelectOptions(searchBudget, config.budgetOptions);
+      renderSelectOptions(searchInterest, config.interestOptions);
+
+      searchTabs.forEach((button) => {
+        const isActive = button.dataset.tab === tab;
+        button.classList.toggle("active-tab", isActive);
+        button.classList.toggle("bg-grove-700", isActive && tab === "lotes");
+        button.classList.toggle("text-white", isActive);
+        button.classList.toggle("bg-sea-700", isActive && tab === "temporada");
+        button.classList.toggle("text-ink/65", !isActive);
+        button.classList.toggle("bg-transparent", !isActive);
+      });
+    }
+
+    searchTabs.forEach((button) => {
+      button.addEventListener("click", () => syncSearchTab(button.dataset.tab));
+    });
+
+    quickSearchForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const { messagePrefix } = searchState[activeTab];
+      const message = `${messagePrefix} ${searchLocation.value}. Faixa: ${searchBudget.value}. Interesse: ${searchInterest.value}.`;
+      const url = `https://wa.me/5582999999999?text=${encodeURIComponent(message)}`;
+      window.open(url, "_blank", "noopener,noreferrer");
+    });
+
+    const revealItems = document.querySelectorAll(".reveal");
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.18 }
+    );
+
+    revealItems.forEach((item, index) => {
+      item.style.transitionDelay = `${Math.min(index * 60, 240)}ms`;
+      observer.observe(item);
+    });
+
+    document.getElementById("current-year").textContent = new Date().getFullYear();
+
+    syncSearchTab(activeTab);
+    lucide.createIcons();
+  </script>
+</body>
+</html>
